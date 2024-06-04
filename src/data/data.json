@@ -2,7 +2,7 @@
   "boards": [
     {
       "nameBoard": "Development",
-      "active" : false,
+      "statusActive" : true,
       "columnsList": [
         {
           "titleColumn": "To do",
@@ -286,7 +286,7 @@
     },
     {
       "nameBoard": "Marketing Plan",
-      "active" : false,
+      "statusActive" : false,
       "columnsList": [
         {
           "titleColumn": "To do",
@@ -378,7 +378,7 @@
     },
     {
       "nameBoard": "Roadmap",
-      "active" : false,
+      "statusActive" : false,
       "columnsList": [
         {
           "titleColumn": "Now",
