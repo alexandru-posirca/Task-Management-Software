@@ -47,11 +47,6 @@ function BoardDropDown({ setActiveDropDown }) {
             </div>
           ))}
 
-          <div className="flex items-center space-x-2 text-orange-500 px-5 py-4">
-            <img src={boardIcon} className="h-8" />
-            <p className="text-lg font-bold">Add New Board</p>
-          </div>
-
           <div className="mx-2 p-4 space-x-2 bg-gray-200 dark:bg-gray-500 flex justify-center items-center rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"

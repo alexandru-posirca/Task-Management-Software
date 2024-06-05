@@ -2,10 +2,12 @@ import { useState } from 'react'
 import arrowDown from "../assets/arrow-down.svg";
 import arrowUp from "../assets/arrow-up.svg";
 import BoardDropDown from './BoardDropDown';
+import TaskModal from '../modals/TaskModal';
 
 function Header() {
 
   const [activeDropDown, setActiveDropDown] = useState(false);
+  const [activeTaskModal, setActiveTaskModal] = useState(false);
 
   return (
     <div className='p-4 fixed left-0 right-0 bg-white-main dark:bg-gray-500 z-30'>
@@ -27,7 +29,11 @@ function Header() {
             <button className='hidden md:block button'>
               + Add new task
             </button>
-            <button className='button py-1 px-3 md:hidden'>
+            <button
+            onClick={()=> {
+              setActiveTaskModal(state => !state)
+            }}
+            className='button py-1 px-3 md:hidden'>
               +
             </button>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#ff3d00" d="M8.5 17c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m7-10c1.1 0 2-.9 2-2s-.9-2-2-2s-2 .9-2 2s.9 2 2 2m-7 3c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m0 7c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7-14c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"></path></svg>
@@ -35,6 +41,9 @@ function Header() {
       </header>
 
       {activeDropDown && <BoardDropDown setActiveDropDown={setActiveDropDown}/>}
+
+      { activeTaskModal && <TaskModal device='mobile' setActiveTaskModal={setActiveTaskModal}/> }
+
     </div>
   )
 }

@@ -16,6 +16,8 @@ export default {
       gray: {
         100: "#e2e2e2",
         200: "#b9b9ba",
+        300: "#787878",
+        400: "#404040",
         500: "#171619",
       },
       cyan: {
@@ -30,5 +32,7 @@ export default {
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+  ],
 }
