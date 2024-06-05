@@ -21,7 +21,7 @@ function Header() {
             <h3 className='truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-20'>
               Board
             </h3>
-            <img src={activeDropDown ? arrowUp : arrowDown} alt="icon-dropdown" className='w-7 ml-2 md:hidden cursor-pointer' onClick={() => setActiveDropDown(state =>!state)} />
+            <img src={activeDropDown ? arrowUp : arrowDown} alt="icon-dropdown" className='ml-2 md:hidden cursor-pointer' onClick={() => setActiveDropDown(state =>!state)} />
           </div>
         </div>
 
@@ -42,7 +42,7 @@ function Header() {
 
       {activeDropDown && <BoardDropDown setActiveDropDown={setActiveDropDown}/>}
 
-      { activeTaskModal && <TaskModal device='mobile' setActiveTaskModal={setActiveTaskModal}/> }
+      { activeTaskModal && <TaskModal device='mobile' setActiveTaskModal={setActiveTaskModal} type="add"/> }
 
     </div>
   )

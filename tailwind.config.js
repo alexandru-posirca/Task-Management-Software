@@ -6,6 +6,12 @@ export default {
   ],
   darkMode: 'class',
   theme: {
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "1025px",
+      xl: "1200px",
+    },
     colors: {
       "black-main": "#000000",
       "white-main": "#FAFAF9",
@@ -24,6 +30,7 @@ export default {
         500: "#114547"
       },
       orange: {
+        300: "#F9A602",
         500: "#ff4307"
       },
       blue: {
