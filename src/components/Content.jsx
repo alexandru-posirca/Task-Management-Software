@@ -33,7 +33,7 @@ function Content() {
 
   return (
     <div
-    className={windowSize[0] >= 768 && sidebarActive ? 'bg-gray-100 overflow-x-scroll h-screen scrollbar-hide flex gap-6 dark:bg-gray-500 ml-[261px]' : 'bg-gray-100 overflow-x-scroll h-screen scrollbar-hide flex gap-6 dark:bg-gray-500'}
+    className={windowSize[0] >= 768 && sidebarActive ? 'bg-gray-100 overflow-x-scroll h-screen scrollbar-hide flex gap-6 dark:bg-gray-500 ml-[261px]' : 'bg-gray-100 overflow-x-scroll h-screen scrollbar-hide flex gap-6 dark:bg-gray-500 flex-col items-center'}
     >
       {
         windowSize[0] >= 768 && (

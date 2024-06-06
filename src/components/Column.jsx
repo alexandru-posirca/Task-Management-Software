@@ -1,6 +1,7 @@
 import { shuffle } from "lodash"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import Task from "./Task"
 
 function Column({ colIndex }) {
 
@@ -27,13 +28,20 @@ function Column({ colIndex }) {
 
   return (
     <div
-    className="min-w-[280px] mx-5 scrollbar-hide pt-[90px]">
+    className="max-w-[420px] px-5 md:px-0 w-full md:max-w-[350px] mx-5 scrollbar-hide pt-6 md:pt-[90px]">
       <p
       className="flex items-center gap-2 tracking-widest text-gray-400 font-semibold md:tracking-[3px]"
       >
         <span className={`size-4 rounded-full ${color}`}></span>
         {col.titleColumn} ({col.tasksList.length})
       </p>
+
+      {
+        col.tasksList.map((task, index) => (
+          <Task key={index} taskIndex={index} colIndex={colIndex} />
+        ))
+      }
+
     </div>
   )
 }

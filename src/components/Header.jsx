@@ -2,12 +2,12 @@ import { useState } from 'react'
 import arrowDown from "../assets/arrow-down.svg";
 import arrowUp from "../assets/arrow-up.svg";
 import BoardDropDown from './BoardDropDown';
-import TaskModal from '../modals/TaskModal';
+import AddTaskModal from '../modals/AddTaskModal';
 
 function Header() {
 
   const [activeDropDown, setActiveDropDown] = useState(false);
-  const [activeTaskModal, setActiveTaskModal] = useState(false);
+  const [activeAddTaskModal, setAddActiveTaskModal] = useState(false);
 
   return (
     <div className='p-4 fixed left-0 right-0 bg-white-main dark:bg-gray-500 z-30'>
@@ -15,10 +15,10 @@ function Header() {
         <div className='flex items-center space-x-2 md:space-x-4'>
           <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 640 512"><path fill="#ff3d00" d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32M192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32"></path></svg>
           <h3 className='hidden md:inline-block font-bold md:text-2xl'>
-            Task Management Software
+            Task Software
           </h3>
           <div className='flex items-center'>
-            <h3 className='truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-20'>
+            <h3 className='truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-5'>
               Board
             </h3>
             <img src={activeDropDown ? arrowUp : arrowDown} alt="icon-dropdown" className='ml-2 md:hidden cursor-pointer' onClick={() => setActiveDropDown(state =>!state)} />
@@ -31,7 +31,7 @@ function Header() {
             </button>
             <button
             onClick={()=> {
-              setActiveTaskModal(state => !state)
+              setAddActiveTaskModal(state => !state)
             }}
             className='button py-1 px-3 md:hidden'>
               +
@@ -41,7 +41,7 @@ function Header() {
 
       {activeDropDown && <BoardDropDown setActiveDropDown={setActiveDropDown}/>}
 
-      { activeTaskModal && <TaskModal device='mobile' setActiveTaskModal={setActiveTaskModal} type="add"/> }
+      { activeAddTaskModal && <AddTaskModal device='mobile' setAddActiveTaskModal={setAddActiveTaskModal} type="add"/> }
 
     </div>
   )
