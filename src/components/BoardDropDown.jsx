@@ -21,7 +21,7 @@ function BoardDropDown({ setActiveDropDown }) {
 
   return (
     <div
-      className="py-10 px-6 absolute left-0 right-0 bottom-[-100vh] top-[73px] bg-gray-100"
+      className="py-10 px-6 absolute left-0 right-0 bottom-[-100vh] top-[72px] bg-gray-100"
       onClick={(e) => {
         if (e.target !== e.currentTarget) {
           return;
