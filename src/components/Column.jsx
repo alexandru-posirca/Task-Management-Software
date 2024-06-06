@@ -28,7 +28,7 @@ function Column({ colIndex }) {
 
   return (
     <div
-    className="max-w-[420px] px-5 md:px-0 w-full md:max-w-[350px] mx-5 scrollbar-hide pt-6 md:pt-[90px]">
+    className="max-w-[420px] px-5 md:px-0 w-full md:max-w-[350px] mx-5 scrollbar-hide pt-6 md:pt-[100px]">
       <p
       className="flex items-center gap-2 tracking-widest text-gray-400 font-semibold md:tracking-[3px]"
       >

@@ -35,6 +35,14 @@ import data from "../data/data.json";
       const newCol = board.columnsList.find((col, index) => index === newColIndex);
       newCol.tasksList.push(task);
     },
+    setSubTaskCompleted: (state, action) => {
+      const payload = action.payload;
+      const board = state.find(board => board.statusActive);
+      const col = board.columnsList.find((col, i) => i === payload.colIndex);
+      const task = col.tasksList.find((task, i) => i === payload.taskIndex);
+      const subtask = task.subTasks.find((subtask, i) => i === payload.index);
+      subtask.statusCompleted = !subtask.statusCompleted;
+    },
   }
 })
 
