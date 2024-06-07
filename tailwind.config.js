@@ -35,6 +35,9 @@ export default {
       },
       blue: {
         500: "#0003ff"
+      },
+      red: {
+        400: "#e14b3c"
       }
     },
     extend: {},

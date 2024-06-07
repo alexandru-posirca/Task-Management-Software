@@ -55,6 +55,12 @@ import data from "/public/data/data.json";
       const newCol = columns.find((col, i) => i === payload.newColIndex);
       newCol.tasksList.push(task);
     },
+    deleteTask: (state, action) => {
+      const payload = action.payload;
+      const board = state.find((board) => board.statusActive);
+      const col = board.columnsList.find((col, i) => i === payload.colIndex);
+      col.tasksList = col.tasksList.filter((task, i) => i !== payload.taskIndex);
+    },
   }
 })
 

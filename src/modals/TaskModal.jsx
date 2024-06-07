@@ -4,6 +4,7 @@ import EllipsisMenu from "../components/EllipsisMenu"
 import ellipsis from "../assets/ellipsis.svg"
 import Subtask from "../components/SubTask"
 import sliceBoards from "../redux/sliceBoards"
+import DeleteTaskModal from "./DeleteTaskModal"
 
 
 function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
@@ -26,13 +27,16 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
   const [newColIndex, setNewColIndex] = useState(columns.indexOf(col))
   const [ellipsisMenuActive, setEllipsisMenuActive] = useState(false)
   const [deleteModalActive, setDeleteModalActive] = useState(false)
+  const [addTaskModalActive, setAddTaskModalActive] = useState(false)
 
   const setActiveEditModal = () => {
-
+    setAddTaskModalActive(true)
+    setEllipsisMenuActive(false)
   }
 
   const setActiveDeleteModal = () => {
-
+    setEllipsisMenuActive(false)
+    setDeleteModalActive(true)
   }
 
   const onClose = e => {
@@ -50,6 +54,16 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
   const onChange = e => {
     setstatusTask(e.target.value)
     setNewColIndex(e.target.selectedIndex)
+  }
+
+  const onDeleteBttnClick = e => {
+    if(e.target.textContent === 'Delete') {
+      dispatch(
+        sliceBoards.actions.deleteTask({ taskIndex, colIndex})
+      )
+      setTaskModalActive(false)
+      setDeleteModalActive(false)
+    }
   }
 
   return (
@@ -108,7 +122,7 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
           >
             {
               columns.map((column, index) => (
-                <option className="status-option" key={index}>
+                <option className="status-option text-base" key={index}>
                   {column.titleColumn}
                 </option>
               ))
@@ -116,6 +130,16 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
           </select>
         </div>
       </div>
+          {
+            deleteModalActive && (
+              <DeleteTaskModal
+              setDeleteModalActive={setDeleteModalActive}
+              onDeleteBttnClick={onDeleteBttnClick}
+              title={task.titleTask}
+              type='task'
+              />
+            )
+          }
     </div>
   )
 }

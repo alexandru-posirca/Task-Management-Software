@@ -3,18 +3,18 @@ function EllipsisMenu({ type, setActiveEditModal, setActiveDeleteModal}) {
     <div
     className={
       type === 'Boards'
-      ? "absolute top-16 right-5" : 'absolute top-6 right-4'
+      ? "absolute top-16 right-5" : 'absolute top-10 right-4'
     }
     >
       <div className="flex items-center justify-end">
         <div
-        className="text-sm w-40 font-medium z-50 shadow-md shadow-gray-500 bg-white-main dark:bg-gray-500 space-y-4 py-5 px-4 rounded-lg h-auto pr-12"
+        className="text-sm w-40 font-medium z-50 shadow-sm shadow-gray-500  dark:shadow-gray-400 bg-white-main dark:bg-gray-400 space-y-4 py-5 px-4 rounded-lg h-auto pr-12"
         >
           <p
           onClick={() => {
               setActiveEditModal()
           }}
-          className="cursor-pointer dark:text-gray-300 text-gray-500"
+          className="cursor-pointer dark:text-gray-100 text-gray-500"
           >
             Edit {type}
           </p>
