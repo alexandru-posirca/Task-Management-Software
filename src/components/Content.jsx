@@ -40,7 +40,7 @@ function Content() {
     >
       {
         windowSize[0] >= 768 && (
-          <Sidebar/>
+          <Sidebar sidebarActive={sidebarActive} setSidebarActive={setSidebarActive}/>
         )
       }
       {columns.length > 0 ? (
