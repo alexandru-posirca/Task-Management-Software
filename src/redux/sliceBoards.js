@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../data/data.json";
+import data from "/public/data/data.json";
 
  const sliceBoards = createSlice( {
   name: 'boards',
@@ -42,6 +42,18 @@ import data from "../data/data.json";
       const task = col.tasksList.find((task, i) => i === payload.taskIndex);
       const subtask = task.subTasks.find((subtask, i) => i === payload.index);
       subtask.statusCompleted = !subtask.statusCompleted;
+    },
+    setTaskStatus: (state, action) => {
+      const payload = action.payload;
+      const board = state.find((board) => board.statusActive);
+      const columns = board.columnsList;
+      const col = columns.find((col, i) => i === payload.colIndex);
+      if (payload.colIndex === payload.newColIndex) return;
+      const task = col.tasksList.find((task, i) => i === payload.taskIndex);
+      task.status = payload.status;
+      col.tasks = col.tasksList.filter((task, i) => i !== payload.taskIndex);
+      const newCol = columns.find((col, i) => i === payload.newColIndex);
+      newCol.tasksList.push(task);
     },
   }
 })
