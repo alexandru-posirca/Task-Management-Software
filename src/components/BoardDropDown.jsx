@@ -17,8 +17,6 @@ function BoardDropDown({ setActiveDropDown }) {
 
   const boards = useSelector((state) => state.boards);
 
-  console.log("boards =", boards);
-
   return (
     <div
       className="py-10 px-6 absolute left-0 right-0 bottom-[-100vh] top-[72px] bg-gray-100"
@@ -47,7 +45,7 @@ function BoardDropDown({ setActiveDropDown }) {
             </div>
           ))}
 
-          <div className="mx-2 p-4 space-x-2 bg-gray-200 dark:bg-gray-500 flex justify-center items-center rounded-lg">
+          <div className="mx-2 p-4 space-x-2 bg-gray-300 dark:bg-gray-400 flex justify-center items-center rounded-3xl bg-opacity-40">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -59,7 +57,7 @@ function BoardDropDown({ setActiveDropDown }) {
                   d="M184 128a56 56 0 1 1-56-56a56 56 0 0 1 56 56"
                   opacity=".2"
                 ></path>
-                <path d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0m72 88a64 64 0 1 1-64-64a64.07 64.07 0 0 1 64 64m-16 0a48 48 0 1 0-48 48a48.05 48.05 0 0 0 48-48M58.34 69.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68l-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32M192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72m5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8m80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8m112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16"></path>
+                <path  d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0m72 88a64 64 0 1 1-64-64a64.07 64.07 0 0 1 64 64m-16 0a48 48 0 1 0-48 48a48.05 48.05 0 0 0 48-48M58.34 69.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68l-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32M192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72m5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8m80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8m112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16"></path>
               </g>
             </svg>
             <Switch
@@ -72,7 +70,7 @@ function BoardDropDown({ setActiveDropDown }) {
               <span
                 className={` ${
                   darkTheme ? "translate-x-6" : "translate-x-1"
-                } inline-block h-4 w-4 transform rounded-full bg-gray-500 transition`}
+                } inline-block h-4 w-4 transform rounded-full bg-gray-400 transition`}
               ></span>
             </Switch>
             <svg

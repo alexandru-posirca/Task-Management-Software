@@ -11,7 +11,7 @@ function Column({ colIndex }) {
     'bg-cyan-500',
     'bg-orange-300',
     'bg-orange-500',
-    'bg-green-300',
+    'bg-cyan-300',
     'bg-green-500'
   ]
 

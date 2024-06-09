@@ -5,6 +5,7 @@ import ellipsis from "../assets/ellipsis.svg"
 import Subtask from "../components/SubTask"
 import sliceBoards from "../redux/sliceBoards"
 import DeleteTaskModal from "./DeleteTaskModal"
+import AddTaskModal from "../modals/AddTaskModal"
 
 
 function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
@@ -69,9 +70,10 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
   return (
     <div
     onClick={onClose}
-    className="flex justify-center items-center bg-gray-500 bg-opacity-80 overflow-scroll scrollbar-hide fixed inset-0 z-50 px-2 py-4"
+    className="flex justify-center items-center bg-gray-500 bg-opacity-80 overflow-scroll scrollbar-hide fixed inset-0 z-50
+    p-4"
     >
-      <div className="max-h-[95vh] m-auto scrollbar-hide overflow-y-scroll bg-white-main dark:bg-gray-500 text-gray-500 dark:text-white-main font-bold shadow-md shadow-gray-500 max-w-md w-full p-8 rounded-xl">
+      <div className="max-h-[95vh] m-auto scrollbar-hide overflow-y-scroll bg-white-main dark:bg-gray-500 text-gray-500 dark:text-white-main font-semibold shadow-md shadow-gray-500 max-w-[420px] w-full p-8 rounded-xl">
         <div className="w-full relative flex justify-between items-center">
           <h1 className="text-lg">
             {task.titleTask}
@@ -137,6 +139,17 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
               onDeleteBttnClick={onDeleteBttnClick}
               title={task.titleTask}
               type='task'
+              />
+            )
+          }
+          {
+            addTaskModalActive && (
+              <AddTaskModal
+              setAddTaskModalActive={setAddTaskModalActive}
+              setTaskModalActive={setTaskModalActive}
+              type='edit'
+              taskIndex={taskIndex}
+              prevColIndex={colIndex}
               />
             )
           }

@@ -25,7 +25,7 @@ function Task({ taskIndex, colIndex}) {
       onClick={() => {
         setTaskModalActive(true)
       }}
-      className="py-6 px-3 rounded-lg first:my-5 bg-white-main dark:bg-gray-500 shadow-gray-200 shadow-lg hover:text-orange-300 dark:text-white-main dark:hover:text-orange-300 cursor-pointer">
+      className="py-6 px-3 rounded-lg first:my-5 bg-white-main dark:bg-gray-500 shadow-gray-200 shadow-lg hover:text-orange-400 dark:text-white-main dark:hover:text-orange-400 cursor-pointer">
         <p className="tracking-wide font-bold">
           {task.titleTask}
         </p>

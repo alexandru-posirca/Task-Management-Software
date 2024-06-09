@@ -7,8 +7,8 @@ function DeleteTaskModal({ type, title, onDeleteBttnClick, setDeleteModalActive 
       }
       setDeleteModalActive(false)
     }}
-    className="fixed inset-0 px-2 py-4 overflow-scroll scrollbar-hide z-50 flex justify-center items-center bg-gray-500 bg-opacity-80">
-      <div className="m-auto bg-white-main dark:bg-gray-400 text-black-main dark:text-white-main scrollbar-hide overflow-y-scroll max-h-[95vh] max-w-md w-full p-8 rounded-xl font-bold">
+    className="fixed inset-0 p-4 overflow-scroll scrollbar-hide z-50 flex justify-center items-center bg-gray-500 bg-opacity-80">
+      <div className="m-auto bg-white-main dark:bg-gray-400 text-black-main dark:text-white-main scrollbar-hide overflow-y-scroll max-h-[95vh] max-w-[420px] w-full p-8 rounded-xl font-bold">
         <h3 className="text-red-400 font-bold text-xl">
           Delete this {type}?
         </h3>
@@ -16,7 +16,7 @@ function DeleteTaskModal({ type, title, onDeleteBttnClick, setDeleteModalActive 
           <p className="tracking-wide text-xs pt-6 text-gray-300 dark:text-gray-200">
             Are you certain you want to permanently delete the task <span className="italic font-semibold">"{title}"</span> and all its subtasks?
             <span className="block mt-4 font-semibold">
-            This action cannot be reversed
+            *This action cannot be reversed
             </span>
           </p>
         ) : (

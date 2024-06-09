@@ -3,22 +3,24 @@ import arrowDown from "../assets/arrow-down.svg";
 import arrowUp from "../assets/arrow-up.svg";
 import BoardDropDown from './BoardDropDown';
 import AddTaskModal from '../modals/AddTaskModal';
+import boardIcon from "../assets/board-icon.svg";
 
 function Header() {
 
   const [activeDropDown, setActiveDropDown] = useState(false);
-  const [activeAddTaskModal, setAddActiveTaskModal] = useState(false);
+  const [taskModalActive, setTaskModalActive] = useState(false);
 
   return (
     <div className='p-4 fixed left-0 right-0 bg-white-main dark:bg-gray-500 z-30'>
       <header className='flex justify-between dark:text-white-main items-center'>
         <div className='flex items-center space-x-2 md:space-x-4'>
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 640 512"><path fill="#ff3d00" d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32M192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32"></path></svg>
-          <h3 className='hidden md:inline-block font-bold md:text-2xl'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="#ff3d00" d="M2 2h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1m4.655 8.595a.75.75 0 0 1 0 1.06L4.03 14.28a.75.75 0 0 1-1.06 0l-1.5-1.5a.749.749 0 0 1 .326-1.275a.75.75 0 0 1 .734.215l.97.97l2.095-2.095a.75.75 0 0 1 1.06 0M9.75 2.5h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1 0-1.5m0 5h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1 0-1.5m0 5h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1 0-1.5m-7.25-9v3h3v-3Z"></path></svg>
+          <h3 className='hidden md:inline-block font-semibold md:text-2xl'>
             Task Software
           </h3>
           <div className='flex items-center'>
-            <h3 className='truncate max-w-[200px] md:text-2xl text-xl font-bold md:ml-5'>
+            <img src={boardIcon} className="w-8 ml-1 md:ml-5 hidden md:block"></img>
+            <h3 className='truncate max-w-[200px] md:text-2xl text-xl font-semibold ml-1 md:ml-1'>
               Board
             </h3>
             <img src={activeDropDown ? arrowUp : arrowDown} alt="icon-dropdown" className='ml-2 md:hidden cursor-pointer' onClick={() => setActiveDropDown(state =>!state)} />
@@ -26,14 +28,18 @@ function Header() {
         </div>
 
         <div className='flex space-x-4 items-center md:space-x-6'>
-            <button className='hidden md:block button'>
+            <button className='hidden md:block button'
+              onClick={()=> {
+                setTaskModalActive(prevState => !prevState)
+              }}
+            >
               + Add new task
             </button>
             <button
             onClick={()=> {
-              setAddActiveTaskModal(state => !state)
+              setTaskModalActive(prevState => !prevState)
             }}
-            className='button py-1 px-3 md:hidden'>
+            className='button pt-[2px] pb-1 px-3 md:hidden'>
               +
             </button>
         </div>
@@ -41,7 +47,7 @@ function Header() {
 
       {activeDropDown && <BoardDropDown setActiveDropDown={setActiveDropDown}/>}
 
-      { activeAddTaskModal && <AddTaskModal device='mobile' setAddActiveTaskModal={setAddActiveTaskModal} type="add"/> }
+      { taskModalActive && <AddTaskModal device='mobile' setAddTaskModalActive={setTaskModalActive} type="add"/> }
 
     </div>
   )

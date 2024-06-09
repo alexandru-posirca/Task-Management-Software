@@ -4,18 +4,19 @@ import closeIcon from "../assets/close.svg";
 import { useDispatch, useSelector } from "react-redux";
 import sliceBoards from "../redux/sliceBoards";
 
-function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, pervColIndex = 0 }) {
+function TaskModal({ type, action, device, setAddTaskModalActive, setTaskModalActive, taskIndex, prevColIndex = 0 }) {
   const dispatch = useDispatch()
+  const [firstLoadActive, setFirstLoadActive] = useState(true)
   const [titleTask, setTitleTask] = useState('')
   const [descriptionTask, setDescriptionTask] = useState('')
   const [isChecked, setIsChecked] = useState(true)
   const board = useSelector(state => state.boards).find((board) => board.statusActive)
-
   const columns = board.columnsList;
-  const col = columns.find((col, index) =>index === pervColIndex)
+  const col = columns.find((col, index) => index === prevColIndex)
+  const task = col ? col.tasksList.find((task, index) => index === taskIndex) : []
 
-  const [statusTask, setStatusTask] = useState(columns[pervColIndex].titleTask)
-  const [newColIndex, setNewColIndex] = useState(pervColIndex)
+  const [statusTask, setStatusTask] = useState(columns[prevColIndex].titleTask)
+  const [newColIndex, setNewColIndex] = useState(prevColIndex)
 
   const [subTasks, setSubTasks] = useState(
     [
@@ -45,20 +46,30 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
     return true
   }
 
-  const onDelete = id => {
-    setSubTasks( perState => perState.filter(el => el.id !== id) )
+  if (type === 'edit' && firstLoadActive) {
+    setSubTasks(
+      task.subTasks.map(subtask => {
+        return { ...subtask, id: uuidv4()}
+      })
+    )
+    setTitleTask(task.titleTask)
+    setDescriptionTask(task.descriptionTask)
+    setFirstLoadActive(false)
   }
 
-  const onChange = (id, valueNew) => {
-    setSubTasks(pervState => {
-      const stateNew = [...pervState]
+  const onDelete = id => {
+    setSubTasks(prevState => prevState.filter(el => el.id !== id) )
+  }
+
+
+  const onChangeSubTasks = (id, valueNew) => {
+    setSubTasks(prevState => {
+      const stateNew = [...prevState]
       const subTask = stateNew.find(subTask => subTask.id === id)
       subTask.titleSubTask = valueNew
       return stateNew
     })
   }
-
-
 
   const onSubmit = type => {
     if(type === 'add') {
@@ -76,30 +87,28 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
         subTasks,
         statusTask,
         taskIndex,
-        pervColIndex,
+        prevColIndex,
         newColIndex
       }))
     }
   }
 
-
-
   return (
     <div
-      onClick={(e) => {
+      onClick={e => {
         if (e.target !== e.currentTarget) {
           return;
         }
-        setAddActiveTaskModal(false);
+        setAddTaskModalActive(false);
       }}
       className={
         device === "mobile"
-          ? "p-6 pb-40 overflow-y-scroll flex absolute left-0 right-0 top-0 bottom-[-100vh] bg-black-main bg-opacity-80"
-          : "p-6 pb-40 overflow-y-scroll absolute left-0 right-0 top-0 bottom-[-100vh] flex bg-black-main bg-opacity-80"
+          ? "p-4 pb-40 overflow-y-scroll flex absolute left-0 right-0 top-0 bottom-[-100vh] bg-black-main bg-opacity-80"
+          : "px-4 pb-40 pt-6 overflow-y-scroll absolute inset-0 flex bg-black-main bg-opacity-30"
       }
     >
       <div
-      className="overflow-y-scroll max-h-[95vh] bg-white-main dark:bg-gray-500 text-black-main  dark:text-white-main shadow-gray-500 scrollbar-hide m-auto w-full p-8 rounded-xl font-bold shadow-md max-w-[420px] md:max-w-[800px]"
+      className="overflow-y-scroll max-h-[95vh] bg-white-main dark:bg-gray-500 text-black-main  dark:text-white-main shadow-gray-500 scrollbar-hide m-auto w-full p-8 rounded-xl font-semibold shadow-md max-w-[420px] md:max-w-[800px]"
       >
         <h3 className="text-lg">
          {action === 'edit' ? 'Edit' : 'Add new'} Task
@@ -115,7 +124,7 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
             value={titleTask}
             onChange={(e)=> setTitleTask(e.target.value)}
             type="text"
-            className="px-4 py-2 rounded-md text-sm border border-gray-400 focus:border-0 focus:outline-orange-300 bg-transparent ring-0 outline-none dark:text-black-main"
+            className="px-4 py-2 rounded-md text-sm border border-gray-300 focus:border-0 focus:outline-orange-300 bg-transparent ring-0 outline-none dark:text-black-main"
             placeholder="Enter the name of the task"
           />
         </div>
@@ -127,7 +136,7 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
           <textarea
             value={descriptionTask}
             onChange={(e)=> setDescriptionTask(e.target.value)}
-            className="px-4 py-2 min-h-[200px] rounded-md text-sm border border-gray-400 focus:border-0 focus:outline-orange-300 bg-transparent ring-0 outline-none dark:text-black-main"
+            className="px-4 py-2 min-h-[200px] rounded-md text-sm border border-gray-300 focus:border-0 focus:outline-orange-300 bg-transparent ring-0 outline-none dark:text-black-main"
             placeholder="Enter the description of the task"
           />
         </div>
@@ -147,11 +156,11 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
               >
                 <input
                 onChange={(e) => {
-                  onChange(subTask.id, e.target.value)
+                  onChangeSubTasks(subTask.id, e.target.value)
                 }}
                 type="text"
                 value={subTask.titleSubTask}
-                className="px-4 py-2 text-sm border border-gray-500 focus:outline-orange-300 bg-transparent outline-none focus:border-0 flex-grow rounded-md dark:text-black-main"
+                className="px-4 py-2 text-sm border border-gray-300 focus:outline-orange-300 bg-transparent outline-none focus:border-0 flex-grow rounded-md dark:text-black-main"
                 placeholder="Enter the name of the subtask"
                 />
                 <img
@@ -165,8 +174,8 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
           }
             <button
             onClick={()=> {
-              setSubTasks(stateNew => [
-                ...stateNew,
+              setSubTasks(state => [
+                ...state,
                 {
                   titleSubTask: '', statusCompleted: false, id: uuidv4()
                 }
@@ -174,7 +183,7 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
             }}
             className="w-full py-2 rounded-2xl items-center dark:text-orange-300 dark:bg-white-main bg-orange-300 text-white-main"
             >
-              + Add New Task
+              + Add New Subtask
             </button>
           </div>
       {/*Status section*/}
@@ -200,12 +209,13 @@ function TaskModal({ type, action, device, setAddActiveTaskModal, taskIndex, per
             const checked = validate();
             if(checked) {
               onSubmit(type)
-              setAddActiveTaskModal(false)
+              setAddTaskModalActive(false)
+              type === "edit" && setTaskModalActive(false);
             }
           }}
-          className="w-full text-white-main bg-green-300 py-2 rounded-2xl items-center !mt-4"
+          className="w-full text-white-main bg-cyan-300 py-2 rounded-2xl items-center !mt-4"
           >
-            { type === 'edit' ? 'save edit' : 'Create task'}
+            { type === 'edit' ? 'Save edit' : 'Create task'}
           </button>
         </div>
         </div>
