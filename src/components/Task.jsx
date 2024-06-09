@@ -19,12 +19,21 @@ function Task({ taskIndex, colIndex}) {
     }
   })
 
+  const handleOnDrag = e => {
+    e.dataTransfer.setData(
+      "text",
+      JSON.stringify({ taskIndex, prevColIndex: colIndex})
+    )
+  }
+
   return (
     <div>
       <div
       onClick={() => {
         setTaskModalActive(true)
-      }}
+        }}
+        onDragStart={handleOnDrag}
+        draggable
       className="py-6 px-3 rounded-lg first:my-5 bg-white-main dark:bg-gray-500 shadow-gray-200 shadow-lg hover:text-orange-400 dark:text-white-main dark:hover:text-orange-400 cursor-pointer">
         <p className="tracking-wide font-bold">
           {task.titleTask}

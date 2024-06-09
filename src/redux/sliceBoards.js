@@ -67,6 +67,13 @@ import data from "/public/data/data.json";
       board.nameBoard = payload.nameBoard;
       board.columnsList = payload.newColumnsList;
     },
+    dragTask: (state, action) => {
+      const { colIndex, prevColIndex, taskIndex } = action.payload;
+      const board = state.find((board) => board.statusActive);
+      const prevCol = board.columnsList.find((col, i) => i === prevColIndex);
+      const task = prevCol.tasksList.splice(taskIndex, 1)[0];
+      board.columnsList.find((col, i) => i === colIndex).tasksList.push(task);
+    },
   }
 })
 

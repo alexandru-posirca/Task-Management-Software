@@ -2,6 +2,7 @@ import { shuffle } from "lodash"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import Task from "./Task"
+import sliceBoards from "../redux/sliceBoards"
 
 function Column({ colIndex }) {
 
@@ -26,8 +27,24 @@ function Column({ colIndex }) {
     setColor(shuffle(colors).pop())
   }, [dispatch])
 
+  const handleOnDragOver = e => {
+    e.preventDefault()
+  }
+
+  const handleOnDrop = e => {
+    const {prevColIndex, taskIndex} = JSON.parse(
+      e.dataTransfer.getData("text")
+    )
+    if(colIndex !== prevColIndex) {
+      dispatch(sliceBoards.actions.dragTask({colIndex, prevColIndex, taskIndex})
+      )
+    }
+  }
+
   return (
     <div
+    onDrop={handleOnDrop}
+    onDragOver={handleOnDragOver}
     className="max-w-[420px] px-5 md:px-0 w-full md:max-w-[350px] mx-5 scrollbar-hide pt-6 md:pt-[100px]">
       <p
       className="flex items-center gap-2 tracking-widest text-gray-400 font-semibold md:tracking-[3px]"

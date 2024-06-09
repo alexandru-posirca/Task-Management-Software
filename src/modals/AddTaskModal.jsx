@@ -111,7 +111,7 @@ function TaskModal({ type, action, device, setAddTaskModalActive, setTaskModalAc
       className="overflow-y-scroll max-h-[95vh] bg-white-main dark:bg-gray-500 text-black-main  dark:text-white-main shadow-gray-500 scrollbar-hide m-auto w-full p-8 rounded-xl font-semibold shadow-md max-w-[420px] md:max-w-[800px]"
       >
         <h3 className="text-lg">
-         {action === 'edit' ? 'Edit' : 'Add new'} Task
+         {type === 'edit' ? 'Edit' : 'Add New'} Task
         </h3>
         { /* Title Task */}
         <div className="md:flex gap-6">
