@@ -26,10 +26,10 @@ import data from "/public/data/data.json";
       const board = state.find((board) => board.statusActive);
       const column = board.columnsList.find((col, index) => index === prevColIndex);
       const task = column.tasksList.find((task, index) => index === taskIndex);
-      task.title = titleTask;
-      task.status = statusTask;
-      task.description = descriptionTask;
-      task.subtasks = subTasks;
+      task.titleTask = titleTask;
+      task.statusTask = statusTask;
+      task.descriptionTask = descriptionTask;
+      task.subTasks = subTasks;
       if (prevColIndex === newColIndex) return;
       column.tasksList = column.tasksList.filter((task, index) => index !== taskIndex);
       const newCol = board.columnsList.find((col, index) => index === newColIndex);
@@ -60,6 +60,12 @@ import data from "/public/data/data.json";
       const board = state.find((board) => board.statusActive);
       const col = board.columnsList.find((col, i) => i === payload.colIndex);
       col.tasksList = col.tasksList.filter((task, i) => i !== payload.taskIndex);
+    },
+    editBoard: (state, action) => {
+      const payload = action.payload;
+      const board = state.find((board) => board.statusActive);
+      board.nameBoard = payload.nameBoard;
+      board.columnsList = payload.newColumnsList;
     },
   }
 })
