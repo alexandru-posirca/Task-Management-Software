@@ -45,19 +45,20 @@ function Column({ colIndex }) {
     <div
     onDrop={handleOnDrop}
     onDragOver={handleOnDragOver}
-    className="max-w-[420px] px-5 md:px-0 w-full md:max-w-[350px] mx-5 scrollbar-hide pt-6 md:pt-[100px]">
+    className="xl:max-w-[278px] px-5 md:px-0 xl:w-full md:mx-[16px] scrollbar-hide mt-11 md:flex md:flex-wrap md:gap-6 md:items-start xl:block last:pb-6">
       <p
-      className="flex items-center gap-2 tracking-widest text-gray-400 font-semibold md:tracking-[3px]"
+      className="flex items-center gap-2 tracking-widest text-gray-400 dark:text-gray-100 font-semibold md:tracking-[2px]"
       >
         <span className={`size-4 rounded-full ${color}`}></span>
         {col.titleColumn} ({col.tasksList.length})
       </p>
-
-      {
-        col.tasksList.map((task, index) => (
-          <Task key={index} taskIndex={index} colIndex={colIndex} />
-        ))
-      }
+      <div className="md:flex md:flex-wrap md:gap-5 xl:block">
+        {
+          col.tasksList.map((task, index) => (
+            <Task key={index} taskIndex={index} colIndex={colIndex} />
+          ))
+        }
+      </div>
 
     </div>
   )

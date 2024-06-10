@@ -71,7 +71,7 @@ function EditBoardModal({ setBoardModalActive, type, }) {
       setBoardModalActive(false);
     }}
     className="absolute inset-0 p-4 overflow-scroll scrollbar-hide z-50 flex justify-center items-center bg-black-main bg-opacity-80">
-      <div className="scrollbar-hide overflow-y-scroll max-h-[95vh] bg-white-main dark:bg-orange-500 text-black-main dark:text-white-main font-semibold max-w-md m-auto w-full p-8 rounded-xl shadow-sm shadow-gray-200">
+      <div className="scrollbar-hide overflow-y-scroll max-h-[95vh] bg-white-main dark:bg-gray-500 text-black-main dark:text-white-main font-semibold max-w-md m-auto w-full p-8 rounded-xl border border-gray-300 border-opacity-50">
         <h3 className="text-lg">
           Edit Board
         </h3>
@@ -79,7 +79,7 @@ function EditBoardModal({ setBoardModalActive, type, }) {
           <label className="text-sm text-gray-400 dark:text-white-main">
           Board name
           </label>
-          <input className="bg-transparent px-4 py-2 border-[0.5px] border-gray-300 focus:outline-orange-300 outline-1 ring-0 rounded-md text-sm"
+          <input className="bg-transparent px-4 py-2 border-[0.5px] border-gray-300 focus:outline-orange-300 outline-1 ring-0 rounded-md text-sm dark:text-gray-500"
           type="text"
           placeholder="Enter the name of the board"
           value={nameBoard}
@@ -100,7 +100,7 @@ function EditBoardModal({ setBoardModalActive, type, }) {
               }}
               type="text"
               value={column.titleColumn || ""}
-              className="bg-transparent px-4 py-2 border-[0.5px] border-gray-300 focus:outline-orange-300 outline-[1px] flex-grow rounded-md text-sm"/>
+              className="bg-transparent px-4 py-2 border-[0.5px] border-gray-300 focus:outline-orange-300 outline-[1px] flex-grow rounded-md text-sm dark:text-gray-500"/>
               <img
               onClick={() => {
                 onDeleteColumn(column.id)
@@ -118,7 +118,7 @@ function EditBoardModal({ setBoardModalActive, type, }) {
               { nameBoard: "", tasksList: [], id: uuidv4()}
             ]);
           }}
-          className="w-full items-center py-2 rounded-full text-white-main dark:text-orange-300 hover:opacity-70 bg-orange-300 dark:bg-white-main mt-3">
+          className="w-full items-center py-2 rounded-full text-white-main hover:opacity-70 bg-orange-300 mt-3">
             + Add New Column
           </button>
           <button

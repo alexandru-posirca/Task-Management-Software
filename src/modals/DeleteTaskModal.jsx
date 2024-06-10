@@ -8,8 +8,8 @@ function DeleteTaskModal({ type, title, onDeleteBttnClick, setDeleteModalActive 
       setDeleteModalActive(false)
     }}
     className="fixed inset-0 p-4 overflow-scroll scrollbar-hide z-50 flex justify-center items-center bg-gray-500 bg-opacity-80">
-      <div className="m-auto bg-white-main dark:bg-gray-400 text-black-main dark:text-white-main scrollbar-hide overflow-y-scroll max-h-[95vh] max-w-[420px] w-full p-8 rounded-xl font-bold">
-        <h3 className="text-red-400 font-bold text-xl">
+      <div className="m-auto bg-white-main dark:bg-gray-400 text-black-main dark:text-white-main scrollbar-hide overflow-y-scroll max-h-[95vh] max-w-[420px] w-full p-8 rounded-xl font-semibold">
+        <h3 className="text-red-400 font-semibold text-xl">
           Delete this {type}?
         </h3>
         {type === 'task' ? (

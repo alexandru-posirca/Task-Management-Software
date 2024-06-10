@@ -19,7 +19,7 @@ function BoardDropDown({ setActiveDropDown }) {
 
   return (
     <div
-      className="py-10 px-6 absolute left-0 right-0 bottom-[-100vh] top-[72px] bg-gray-100"
+      className="p-5 absolute left-0 right-0 bottom-[-100vh] top-[64px] bg-gray-100 dark:bg-gray-500"
       onClick={(e) => {
         if (e.target !== e.currentTarget) {
           return;
@@ -27,25 +27,25 @@ function BoardDropDown({ setActiveDropDown }) {
         setActiveDropDown(false);
       }}
     >
-      <div className="bg-white-main shadow-md dark:bg-gray-500 shadow-gray-500 w-full py-4 rounded-xl">
-        <h3 className="dark:text-gray-200 text-gray-500 font-semibold mx-4 mb-8">
+      <div className="bg-white-main w-full py-4 rounded-xl shadow-gray-200 shadow-md">
+        <h3 className="text-gray-500 font-semibold mx-4 mb-8">
           All boards ({boards?.length})
         </h3>
         <div>
           {boards.map((board, index) => (
             <div
-              className={`flex items-center space-x-2 px-5 py-4 dark:text-white-main ${
+              className={`flex items-center space-x-2 px-5 py-4 ${
                 board.statusActive &&
                 "bg-cyan-500 rounded-r-full text-white-main mr-8"
               }`}
               key={index}
             >
               <img src={boardIcon} className="h-8" />
-              <p className="text-lg font-bold">{board.nameBoard}</p>
+              <p className="text-lg font-semibold">{board.nameBoard}</p>
             </div>
           ))}
 
-          <div className="mx-2 p-4 space-x-2 bg-gray-300 dark:bg-gray-400 flex justify-center items-center rounded-3xl bg-opacity-40">
+          <div className="mx-2 p-2 space-x-2 bg-orange-300 dark:bg-gray-300 flex justify-center items-center rounded-2xl bg-opacity-90">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -63,14 +63,12 @@ function BoardDropDown({ setActiveDropDown }) {
             <Switch
               checked={darkTheme}
               onChange={toggleDarkTheme}
-              className={`${
-                darkTheme ? "bg-orange-500" : "bg-gray-100"
-              } relative inline-flex h-6 w-11 items-center rounded-full`}
+              className="bg-gray-100 bg-opacity-100 relative inline-flex h-6 w-11 items-center rounded-full"
             >
               <span
                 className={` ${
                   darkTheme ? "translate-x-6" : "translate-x-1"
-                } inline-block h-4 w-4 transform rounded-full bg-gray-400 transition`}
+                } inline-block h-4 w-4 transform rounded-full bg-cyan-300 transition`}
               ></span>
             </Switch>
             <svg

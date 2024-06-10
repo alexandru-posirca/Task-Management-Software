@@ -34,11 +34,11 @@ function Task({ taskIndex, colIndex}) {
         }}
         onDragStart={handleOnDrag}
         draggable
-      className="py-6 px-3 rounded-lg first:my-5 bg-white-main dark:bg-gray-500 shadow-gray-200 shadow-lg hover:text-orange-400 dark:text-white-main dark:hover:text-orange-400 cursor-pointer">
-        <p className="tracking-wide font-bold">
+      className="py-6 px-3 rounded-lg my-5 md:my-0 xl:my-5 bg-white-main shadow-gray-200 shadow-md hover:text-orange-400 dark:text-gray-500 dark:hover:text-orange-400 cursor-pointer dark:shadow-gray-300">
+        <p className="tracking-wide font-semibold">
           {task.titleTask}
         </p>
-        <p className="text-xs tracking-tighter mt-2 text-gray-400 font-bold">
+        <p className="text-xs tracking-tighter mt-2 text-gray-400 font-semibold">
           {completed} of {subtasks.length} completed tasks
         </p>
       </div>

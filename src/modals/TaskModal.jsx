@@ -73,7 +73,7 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
     className="flex justify-center items-center bg-gray-500 bg-opacity-80 overflow-scroll scrollbar-hide fixed inset-0 z-50
     p-4"
     >
-      <div className="max-h-[95vh] m-auto scrollbar-hide overflow-y-scroll bg-white-main dark:bg-gray-500 text-gray-500 dark:text-white-main font-semibold shadow-md shadow-gray-500 max-w-[420px] w-full p-8 rounded-xl">
+      <div className="max-h-[95vh] m-auto scrollbar-hide overflow-y-scroll bg-white-main dark:bg-gray-500 text-gray-500 dark:text-white-main font-semibold shadow-md shadow-gray-500 max-w-[420px] w-full p-8 rounded-xl border border-gray-300 border-opacity-50">
         <div className="w-full relative flex justify-between items-center">
           <h1 className="text-lg">
             {task.titleTask}
@@ -93,10 +93,10 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
               />
             }
         </div>
-        <p className="text-sm font-semibold tracking-wide text-gray-400 pt-6">
+        <p className="text-sm font-semibold tracking-wide text-gray-300 pt-6">
           {task.descriptionTask}
         </p>
-        <p className="text-sm tracking-widest pt-6 text-gray-400">
+        <p className="text-sm tracking-widest pt-6 text-gray-400 dark:text-white-main">
             Subtasks ({completed}) of {subTasks.length}
         </p>
         <div className="mt-3 space-y-2">
@@ -118,7 +118,7 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
           <label className="text-sm text-gray-400 dark:text-white-main">
             Current Status
           </label>
-          <select className="select-status px-4 py-2 rounded-md text-sm bg-transparent focus:border-0 border border-gray-200 focus:outline-orange-300 outline-none flex-grow"
+          <select className="select-status px-4 py-2 rounded-md text-sm bg-transparent focus:border-0 border border-gray-200 focus:outline-orange-300 outline-none flex-grow dark:text-gray-500"
           value={statusTask}
           onChange={onChange}
           >

@@ -11,7 +11,7 @@ function Header() {
   const [taskModalActive, setTaskModalActive] = useState(false);
 
   return (
-    <div className='p-4 fixed left-0 right-0 bg-white-main dark:bg-gray-500 z-30'>
+    <div className='px-4 py-3 fixed left-0 right-0 bg-white-main shadow-sm dark:shadow-gray-300 shadow-gray-100 dark:bg-gray-500 z-30'>
       <header className='flex justify-between dark:text-white-main items-center'>
         <div className='flex items-center space-x-2 md:space-x-4'>
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="#ff3d00" d="M2 2h4a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1m4.655 8.595a.75.75 0 0 1 0 1.06L4.03 14.28a.75.75 0 0 1-1.06 0l-1.5-1.5a.749.749 0 0 1 .326-1.275a.75.75 0 0 1 .734.215l.97.97l2.095-2.095a.75.75 0 0 1 1.06 0M9.75 2.5h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1 0-1.5m0 5h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1 0-1.5m0 5h5.5a.75.75 0 0 1 0 1.5h-5.5a.75.75 0 0 1 0-1.5m-7.25-9v3h3v-3Z"></path></svg>
@@ -33,13 +33,13 @@ function Header() {
                 setTaskModalActive(prevState => !prevState)
               }}
             >
-              + Add new task
+              + Add New Task
             </button>
             <button
             onClick={()=> {
               setTaskModalActive(prevState => !prevState)
             }}
-            className='button pt-[2px] pb-1 px-3 md:hidden'>
+            className='button py-1 px-3 md:hidden'>
               +
             </button>
         </div>

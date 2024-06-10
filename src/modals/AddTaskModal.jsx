@@ -103,12 +103,12 @@ function TaskModal({ type, action, device, setAddTaskModalActive, setTaskModalAc
       }}
       className={
         device === "mobile"
-          ? "p-4 pb-40 overflow-y-scroll flex absolute left-0 right-0 top-0 bottom-[-100vh] bg-black-main bg-opacity-80"
-          : "px-4 pb-40 pt-6 overflow-y-scroll absolute inset-0 flex bg-black-main bg-opacity-30"
+          ? "p-4 pb-20 overflow-y-scroll flex absolute left-0 right-0 top-0 bottom-[-100vh] bg-black-main bg-opacity-80"
+          : "p-4 overflow-y-scroll absolute inset-0 flex bg-black-main bg-opacity-30"
       }
     >
       <div
-      className="overflow-y-scroll max-h-[95vh] bg-white-main dark:bg-gray-500 text-black-main  dark:text-white-main shadow-gray-500 scrollbar-hide m-auto w-full p-8 rounded-xl font-semibold shadow-md max-w-[420px] md:max-w-[800px]"
+      className="overflow-y-scroll max-h-[95vh] bg-white-main dark:bg-gray-500 text-black-main  dark:text-white-main shadow-gray-500 scrollbar-hide m-auto w-full p-8 rounded-xl font-semibold shadow-md max-w-[420px] md:max-w-[800px] border border-gray-300 border-opacity-50"
       >
         <h3 className="text-lg">
          {type === 'edit' ? 'Edit' : 'Add New'} Task
@@ -181,7 +181,7 @@ function TaskModal({ type, action, device, setAddTaskModalActive, setTaskModalAc
                 }
               ])
             }}
-            className="w-full py-2 rounded-2xl items-center dark:text-orange-300 dark:bg-white-main bg-orange-300 text-white-main"
+            className="w-full py-2 rounded-2xl items-center bg-orange-300 text-white-main"
             >
               + Add New Subtask
             </button>
@@ -189,7 +189,7 @@ function TaskModal({ type, action, device, setAddTaskModalActive, setTaskModalAc
       {/*Status section*/}
         <div className="flex flex-col mt-6 space-y-3">
           <label className="text-sm dark:text-white-main text-gray-300">
-            Current status
+            Current Status
           </label>
           <select
           value={statusTask}
@@ -215,7 +215,7 @@ function TaskModal({ type, action, device, setAddTaskModalActive, setTaskModalAc
           }}
           className="w-full text-white-main bg-cyan-300 py-2 rounded-2xl items-center !mt-4"
           >
-            { type === 'edit' ? 'Save edit' : 'Create task'}
+            { type === 'edit' ? 'Save Edit' : 'Create Task'}
           </button>
         </div>
         </div>

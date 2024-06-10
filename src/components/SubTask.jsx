@@ -21,11 +21,11 @@ function SubTask({ index, taskIndex, colIndex }) {
     <div className="w-full flex items-center justify-start gap-4 p-3 rounded-md relative bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-500 dark:bg-gray-500">
       <input
         type="checkbox"
-        className="size-4 accent-orange-300 cursor-pointer"
+        className="size-4 accent-cyan-300 cursor-pointer"
         checked={completed}
         onChange={onChange}
       />
-        <p className={completed ? "line-through opacity-30" : "text-gray-400"}>
+        <p className={completed ? "line-through opacity-40" : "text-gray-400 dark:text-white-main"}>
         {subtask.titleSubTask}
         </p>
     </div>
