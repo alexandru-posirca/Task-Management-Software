@@ -1,433 +1,536 @@
 {
   "boards": [
     {
-      "nameBoard": "Development",
-      "statusActive" : true,
-      "columnsList": [
-        {
-          "titleColumn": "To do",
-          "tasksList": [
-            {
-              "titleTask": "Build UI for onboarding flow",
-              "descriptionTask": "",
-              "statusTask": "To do",
-              "subTasks": [
-                {
-                  "titleSubTask": "Sign up page",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Sign in page",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Welcome page",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Build UI for search",
-              "descriptionTask": "",
-              "statusTask": "To do",
-              "subTasks": [
-                {
-                  "titleSubTask": "Search page",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Build settings UI",
-              "descriptionTask": "",
-              "statusTask": "To do",
-              "subTasks": [
-                {
-                  "titleSubTask": "Account page",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Billing page",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "QA and test all major user journeys",
-              "descriptionTask": "Once we feel version one is ready, we need to rigorously test it both internally and externally to identify any major gaps.",
-              "statusTask": "To do",
-              "subTasks": [
-                {
-                  "titleSubTask": "Internal testing",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "External testing",
-                  "statusCompleted": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "titleColumn": "Doing",
-          "tasksList": [
-            {
-              "titleTask": "Design settings and search pages",
-              "descriptionTask": "",
-              "statusTask": "Doing",
-              "subTasks": [
-                {
-                  "titleSubTask": "Settings - Account page",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Settings - Billing page",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Search page",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Add account management endpoints",
-              "descriptionTask": "",
-              "statusTask": "Doing",
-              "subTasks": [
-                {
-                  "titleSubTask": "Upgrade plan",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Cancel plan",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Update payment method",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Design onboarding flow",
-              "descriptionTask": "",
-              "statusTask": "Doing",
-              "subTasks": [
-                {
-                  "titleSubTask": "Sign up page",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Sign in page",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Welcome page",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Add search enpoints",
-              "descriptionTask": "",
-              "statusTask": "Doing",
-              "subTasks": [
-                {
-                  "titleSubTask": "Add search endpoint",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Define search filters",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Add authentication endpoints",
-              "descriptionTask": "",
-              "statusTask": "Doing",
-              "subTasks": [
-                {
-                  "titleSubTask": "Define user model",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Add auth endpoints",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Research pricing points of various competitors and trial different business models",
-              "descriptionTask": "We know what we're planning to build for version one. Now we need to finalise the first pricing model we'll use. Keep iterating the subtasks until we have a coherent proposition.",
-              "statusTask": "Doing",
-              "subTasks": [
-                {
-                  "titleSubTask": "Research competitor pricing and business models",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Outline a business model that works for our solution",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Talk to potential customers about our proposed solution and ask for fair price expectancy",
-                  "statusCompleted": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "titleColumn": "Done",
-          "tasksList": [
-            {
-              "titleTask": "Conduct 5 wireframe tests",
-              "descriptionTask": "Ensure the layout continues to make sense and we have strong buy-in from potential users.",
-              "statusTask": "Done",
-              "subTasks": [
-                {
-                  "titleSubTask": "Complete 5 wireframe prototype tests",
-                  "statusCompleted": true
-                }
-              ]
-            },
-            {
-              "titleTask": "Create wireframe prototype",
-              "descriptionTask": "Create a greyscale clickable wireframe prototype to test our asssumptions so far.",
-              "statusTask": "Done",
-              "subTasks": [
-                {
-                  "titleSubTask": "Create clickable wireframe prototype in Balsamiq",
-                  "statusCompleted": true
-                }
-              ]
-            },
-            {
-              "titleTask": "Review results of usability tests and iterate",
-              "descriptionTask": "Keep iterating through the subtasks until we're clear on the core concepts for the app.",
-              "statusTask": "Done",
-              "subTasks": [
-                {
-                  "titleSubTask": "Meet to review notes from previous tests and plan changes",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Make changes to paper prototypes",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Conduct 5 usability tests",
-                  "statusCompleted": true
-                }
-              ]
-            },
-            {
-              "titleTask": "Create paper prototypes and conduct 10 usability tests with potential customers",
-              "descriptionTask": "",
-              "statusTask": "Done",
-              "subTasks": [
-                {
-                  "titleSubTask": "Create paper prototypes for version one",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Complete 10 usability tests",
-                  "statusCompleted": true
-                }
-              ]
-            },
-            {
-              "titleTask": "Market discovery",
-              "descriptionTask": "We need to define and refine our core product. Interviews will help us learn common pain points and help us define the strongest MVP.",
-              "statusTask": "Done",
-              "subTasks": [
-                {
-                  "titleSubTask": "Interview 10 prospective customers",
-                  "statusCompleted": true
-                }
-              ]
-            },
-            {
-              "titleTask": "Competitor analysis",
-              "descriptionTask": "",
-              "statusTask": "Done",
-              "subTasks": [
-                {
-                  "titleSubTask": "Find direct and indirect competitors",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "SWOT analysis for each competitor",
-                  "statusCompleted": true
-                }
-              ]
-            },
-            {
-              "titleTask": "Research the market",
-              "descriptionTask": "We need to get a solid overview of the market to ensure we have up-to-date estimates of market size and demand.",
-              "statusTask": "Done",
-              "subTasks": [
-                {
-                  "titleSubTask": "Write up research analysis",
-                  "statusCompleted": true
-                },
-                {
-                  "titleSubTask": "Calculate TAM",
-                  "statusCompleted": true
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "nameBoard": "Marketing Plan",
-      "statusActive" : false,
-      "columnsList": [
-        {
-          "titleColumn": "To do",
-          "tasksList": [
-            {
-              "titleTask": "Plan Product Hunt launch",
-              "descriptionTask": "",
-              "statusTask": "To do",
-              "subTasks": [
-                {
-                  "titleSubTask": "Find hunter",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Gather assets",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Draft product page",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Notify customers",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Notify network",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Launch!",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Share on Show HN",
-              "descriptionTask": "",
-              "statusTask": "",
-              "subTasks": [
-                {
-                  "titleSubTask": "Draft out HN post",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Get feedback and refine",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Publish post",
-                  "statusCompleted": false
-                }
-              ]
-            },
-            {
-              "titleTask": "Write launch article to publish on multiple channels",
-              "descriptionTask": "",
-              "statusTask": "",
-              "subTasks": [
-                {
-                  "titleSubTask": "Write article",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Publish on LinkedIn",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Publish on Inndie Hackers",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Publish on Medium",
-                  "statusCompleted": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "titleColumn": "Doing",
-          "tasksList": []
-        },
-        {
-          "titleColumn": "Done",
-          "tasksList": []
-        }
-      ]
-    },
-    {
       "nameBoard": "Roadmap",
-      "statusActive" : false,
+      "statusActive": false
+    },
+    {
+      "nameBoard": "Board & Backlog",
+      "statusActive": true,
       "columnsList": [
+    {
+      "titleColumn": "Backlog",
+      "tasksList": [
         {
-          "titleColumn": "Now",
-          "tasksList": [
+          "titleTask": "Research design trends",
+          "descriptionTask": "Investigate the latest design trends to incorporate into the project.",
+          "statusTask": "Backlog",
+          "subTasks": [
             {
-              "titleTask": "Launch version one",
-              "descriptionTask": "",
-              "statusTask": "",
-              "subTasks": [
-                {
-                  "titleSubTask": "Launch privately to our waitlist",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Launch publicly on PH, HN, etc.",
-                  "statusCompleted": false
-                }
-              ]
+              "titleSubTask": "Trend analysis",
+              "statusCompleted": false
             },
             {
-              "titleTask": "Review early feedback and plan next steps for roadmap",
-              "descriptionTask": "Beyond the initial launch, we're keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.",
-              "statusTask": "",
-              "subtasks": [
-                {
-                  "titleSubTask": "Interview 10 customers",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Review common customer pain points and suggestions",
-                  "statusCompleted": false
-                },
-                {
-                  "titleSubTask": "Outline next steps for our roadmap",
-                  "statusCompleted": false
-                }
-              ]
+              "titleSubTask": "Competitor analysis",
+              "statusCompleted": false
             }
           ]
         },
         {
-          "titleColumn": "Next",
-          "tasksList": []
+          "titleTask": "Define user personas",
+          "descriptionTask": "Create detailed user personas to better understand target audience needs.",
+          "statusTask": "Backlog",
+          "subTasks": [
+            {
+              "titleSubTask": "Persona 1",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Persona 2",
+              "statusCompleted": false
+            }
+          ]
         },
         {
-          "titleColumn": "Later",
-          "tasksList": []
+          "titleTask": "Plan UX workshop",
+          "descriptionTask": "Organize a workshop to brainstorm and plan the user experience strategy.",
+          "statusTask": "Backlog",
+          "subTasks": [
+            {
+              "titleSubTask": "Agenda preparation",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Participant list",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Prototype new features",
+          "descriptionTask": "Develop prototypes for new features to test their viability.",
+          "statusTask": "Backlog",
+          "subTasks": [
+            {
+              "titleSubTask": "Feature 1 prototype",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Feature 2 prototype",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Evaluate UI frameworks",
+          "descriptionTask": "Assess various UI frameworks to determine the best fit for the project.",
+          "statusTask": "Backlog",
+          "subTasks": [
+            {
+              "titleSubTask": "Framework 1 evaluation",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Framework 2 evaluation",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "User journey mapping",
+          "descriptionTask": "Map out user journeys to identify key touchpoints and pain points.",
+          "statusTask": "Backlog",
+          "subTasks": [
+            {
+              "titleSubTask": "Journey 1 mapping",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Journey 2 mapping",
+              "statusCompleted": false
+            }
+          ]
         }
       ]
+    },
+    {
+      "titleColumn": "To do",
+      "tasksList": [
+        {
+          "titleTask": "Design homepage layout",
+          "descriptionTask": "Create a visually appealing homepage that effectively conveys the brand and engages users from their first visit.",
+          "statusTask": "To do",
+          "subTasks": [
+            {
+              "titleSubTask": "Header design",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Content sections",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Footer design",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Implement responsive grid",
+          "descriptionTask": "Develop a flexible grid system to ensure the layout adapts and functions across various devices and screen sizes.",
+          "statusTask": "To do",
+          "subTasks": [
+            {
+              "titleSubTask": "Desktop layout",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Tablet layout",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Mobile layout",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Build navigation menu",
+          "descriptionTask": "Create an intuitive navigation menu for easy access to different website sections.",
+          "statusTask": "To do",
+          "subTasks": [
+            {
+              "titleSubTask": "Main menu",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Dropdowns",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Mobile menu",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Create style guide",
+          "descriptionTask": "Develop a style guide to ensure consistent design across the website, including colors, typography, and components.",
+          "statusTask": "To do",
+          "subTasks": [
+            {
+              "titleSubTask": "Color palette",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Typography",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Component styles",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Design login form",
+          "descriptionTask": "Create a user-friendly login form with clear instructions and validation to improve user experience and reduce errors.",
+          "statusTask": "To do",
+          "subTasks": [
+            {
+              "titleSubTask": "Form layout",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Validation messages",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Develop modal windows",
+          "descriptionTask": "Implement reusable modal windows for various user interactions, ensuring accessibility and design consistency.",
+          "statusTask": "To do",
+          "subTasks": [
+            {
+              "titleSubTask": "Basic modal",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Confirmation modal",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Create image carousel",
+          "descriptionTask": "Develop a responsive, engaging image carousel for the homepage to showcase key features or promotions.",
+          "statusTask": "To do",
+          "subTasks": [
+            {
+              "titleSubTask": "Carousel layout",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "Autoplay functionality",
+              "statusCompleted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titleColumn": "In progress",
+      "tasksList": [
+        {
+          "titleTask": "Build user profile page",
+          "descriptionTask": "Develop an intuitive user profile page that provides a seamless experience for managing user information.",
+          "statusTask": "Doing",
+          "subTasks": [
+            {
+              "titleSubTask": "Profile layout",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Profile picture upload",
+              "statusCompleted": false
+            },
+            {
+              "titleSubTask": "User info sections",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Design settings page",
+          "descriptionTask": "Create the UI for the settings page, allowing users to easily manage account settings and privacy preferences.",
+          "statusTask": "Doing",
+          "subTasks": [
+            {
+              "titleSubTask": "Account settings",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Privacy settings",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Implement form validation",
+          "descriptionTask": "Add client-side form validation for immediate error feedback and correction before submission.",
+          "statusTask": "Doing",
+          "subTasks": [
+            {
+              "titleSubTask": "Login form validation",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Registration form validation",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Create notification system",
+          "descriptionTask": "Develop a notification system to inform users of important events with both toast and in-app notifications.",
+          "statusTask": "Doing",
+          "subTasks": [
+            {
+              "titleSubTask": "Toast notifications",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "In-app notifications",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Redesign dashboard UI",
+          "descriptionTask": "Update the dashboard UI to improve usability, visual appeal, and user experience.",
+          "statusTask": "Doing",
+          "subTasks": [
+            {
+              "titleSubTask": "Dashboard layout",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Widget design",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Optimize UI performance",
+          "descriptionTask": "Enhance UI performance by reducing render times, optimizing assets, and improving user experience.",
+          "statusTask": "Doing",
+          "subTasks": [
+            {
+              "titleSubTask": "Reduce render time",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Optimize assets",
+              "statusCompleted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titleColumn": "In review",
+      "tasksList": [
+        {
+          "titleTask": "Evaluate user feedback",
+          "descriptionTask": "Analyze user feedback from beta testing to identify areas for improvement.",
+          "statusTask": "In review",
+          "subTasks": [
+            {
+              "titleSubTask": "Collect feedback",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Analyze feedback",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Finalize style guide",
+          "descriptionTask": "Review and finalize the style guide for consistent design across the project.",
+          "statusTask": "In review",
+          "subTasks": [
+            {
+              "titleSubTask": "Review color palette",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Review typography",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Test responsive grid",
+          "descriptionTask": "Ensure the responsive grid works flawlessly on all devices and screen sizes.",
+          "statusTask": "In review",
+          "subTasks": [
+            {
+              "titleSubTask": "Test desktop layout",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Test mobile layout",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Verify form validation",
+          "descriptionTask": "Confirm that all form validations are working correctly and providing appropriate feedback.",
+          "statusTask": "In review",
+          "subTasks": [
+            {
+              "titleSubTask": "Test login form",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Test registration form",
+              "statusCompleted": false
+            }
+          ]
+        },
+        {
+          "titleTask": "Review UI performance",
+          "descriptionTask": "Assess the UI performance optimizations to ensure smooth user experience.",
+          "statusTask": "In review",
+          "subTasks": [
+            {
+              "titleSubTask": "Load time testing",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Asset optimization review",
+              "statusCompleted": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titleColumn": "Done",
+      "tasksList": [
+        {
+          "titleTask": "Launch new homepage",
+          "descriptionTask": "Deploy the new homepage design, ensuring it is fully functional and visually appealing.",
+          "statusTask": "Done",
+          "subTasks": [
+            {
+              "titleSubTask": "Deploy to server",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Verify deployment",
+              "statusCompleted": true
+            }
+          ]
+        },
+        {
+          "titleTask": "Conduct usability tests",
+          "descriptionTask": "Perform usability tests on the new UI to gather feedback and ensure it meets user needs.",
+          "statusTask": "Done",
+          "subTasks": [
+            {
+              "titleSubTask": "Prepare test scripts",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Conduct tests",
+              "statusCompleted": true
+            }
+          ]
+        },
+        {
+          "titleTask": "Create wireframe prototype",
+          "descriptionTask": "Develop wireframe prototypes to visualize and test the layout and functionality of new features.",
+          "statusTask": "Done",
+          "subTasks": [
+            {
+              "titleSubTask": "Homepage wireframe",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Dashboard wireframe",
+              "statusCompleted": true
+            }
+          ]
+        },
+        {
+          "titleTask": "Implement dark mode",
+          "descriptionTask": "Add dark mode to the UI, providing an alternative theme for better user experience in low-light conditions.",
+          "statusTask": "Done",
+          "subTasks": [
+            {
+              "titleSubTask": "Dark mode toggle",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Dark mode styles",
+              "statusCompleted": true
+            }
+          ]
+        },
+        {
+          "titleTask": "Fix UI bugs",
+          "descriptionTask": "Resolve reported UI bugs to improve the stability and functionality of the user interface.",
+          "statusTask": "Done",
+          "subTasks": [
+            {
+              "titleSubTask": "Bug fix 1",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Bug fix 2",
+              "statusCompleted": true
+            }
+          ]
+        },
+        {
+          "titleTask": "Add animation effects",
+          "descriptionTask": "Implement animations for smoother UI interactions and enhanced visual appeal.",
+          "statusTask": "Done",
+          "subTasks": [
+            {
+              "titleSubTask": "Button animations",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Page transitions",
+              "statusCompleted": true
+            }
+          ]
+        },
+        {
+          "titleTask": "Improve accessibility",
+          "descriptionTask": "Enhance accessibility features to ensure the UI is usable by people with various disabilities.",
+          "statusTask": "Done",
+          "subTasks": [
+            {
+              "titleSubTask": "Keyboard navigation",
+              "statusCompleted": true
+            },
+            {
+              "titleSubTask": "Screen reader support",
+              "statusCompleted": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+    },
+    {
+      "nameBoard": "Marketing",
+      "statusActive": false
+    },
+    {
+      "nameBoard": "Issues",
+      "statusActive": false
+    },
+    {
+      "nameBoard": "Reports",
+      "statusActive": false
     }
   ]
 }
