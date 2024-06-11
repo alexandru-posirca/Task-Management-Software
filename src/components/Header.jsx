@@ -19,11 +19,11 @@ function Header() {
             Task Software
           </h3>
           <div className='flex items-center'>
-            <img src={boardIcon} className="w-8 ml-1 md:ml-5 hidden md:block"></img>
+            <img src={boardIcon} className="w-8 ml-1 md:ml-5 hidden md:block" alt="board-icon" width="32" height="32"></img>
             <h3 className='truncate max-w-[200px] md:text-2xl text-xl font-semibold ml-1 md:ml-1'>
               Board
             </h3>
-            <img src={activeDropDown ? arrowUp : arrowDown} alt="icon-dropdown" className='ml-2 md:hidden cursor-pointer' onClick={() => setActiveDropDown(state =>!state)} />
+            <img src={activeDropDown ? arrowUp : arrowDown} alt="icon-dropdown" className='ml-2 md:hidden cursor-pointer' width="28" height="28" onClick={() => setActiveDropDown(state =>!state)} />
           </div>
         </div>
 

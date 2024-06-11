@@ -84,6 +84,7 @@ function TaskModal({ colIndex, taskIndex, setTaskModalActive }) {
             setEllipsisMenuActive(state => !state)
             }}
             className="cursor-pointer"
+            alt="board-icon" width="32" height="32"
             />
             {
               ellipsisMenuActive && <EllipsisMenu

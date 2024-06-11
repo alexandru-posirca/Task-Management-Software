@@ -107,6 +107,7 @@ function EditBoardModal({ setBoardModalActive, type, }) {
               }}
               src={closeIcon}
               className="cursor-pointer m-2 mr-0"
+              alt="board-icon" width="32" height="32"
               />
         </div>
       ))}

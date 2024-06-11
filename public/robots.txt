@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://task-management-software.pages.dev/sitemap.xml

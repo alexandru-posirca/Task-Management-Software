@@ -31,10 +31,10 @@ function Sidebar({ sidebarActive, setSidebarActive, }) {
         <div className="flex flex-col justify-between">
           <div>
             {boards.map((board, index) => (
-              <div className={`flex items-center space-x-2 rounded-r-full px-5 mr-8 ease-in-out duration-500 py-4 dark:text-white ${board.statusActive && "bg-cyan-500 rounded-r-full text-white-main mr-8"}`}
+              <div className={`flex items-center space-x-2 rounded-r-full px-5 mr-8 ease-in-out duration-500 py-2 dark:text-white ${board.statusActive && "bg-cyan-500 rounded-r-full text-white-main mr-8"}`}
               key={index}
               >
-                <img src={boardIcon} className="h-8"/>
+                <img src={boardIcon} className="h-8" alt="board-icon" width="32" height="32"/>
                 <p className="text-lg font-semibold text-ellipsis overflow-hidden whitespace-nowrap w-[148px]">
                   {board.nameBoard}
                 </p>

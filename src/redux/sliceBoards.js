@@ -50,8 +50,8 @@ import data from "/public/data/data.json";
       const col = columns.find((col, i) => i === payload.colIndex);
       if (payload.colIndex === payload.newColIndex) return;
       const task = col.tasksList.find((task, i) => i === payload.taskIndex);
-      task.status = payload.status;
-      col.tasks = col.tasksList.filter((task, i) => i !== payload.taskIndex);
+      task.statusTask = payload.status;
+      col.tasksList = col.tasksList.filter((task, i) => i !== payload.taskIndex);
       const newCol = columns.find((col, i) => i === payload.newColIndex);
       newCol.tasksList.push(task);
     },

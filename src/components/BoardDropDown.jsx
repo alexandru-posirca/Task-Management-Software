@@ -34,13 +34,13 @@ function BoardDropDown({ setActiveDropDown }) {
         <div>
           {boards.map((board, index) => (
             <div
-              className={`flex items-center space-x-2 px-5 py-4 ${
+              className={`flex items-center space-x-2 px-5 py-2 ${
                 board.statusActive &&
                 "bg-cyan-500 rounded-r-full text-white-main mr-8"
               }`}
               key={index}
             >
-              <img src={boardIcon} className="h-8" />
+              <img src={boardIcon} className="h-8" alt="board-icon" width="32" height="32" />
               <p className="text-lg font-semibold">{board.nameBoard}</p>
             </div>
           ))}
