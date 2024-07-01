@@ -34,7 +34,7 @@ function Task({ taskIndex, colIndex}) {
         }}
         onDragStart={handleOnDrag}
         draggable
-      className="py-6 px-3 rounded-lg my-5 md:my-0 xl:my-5 bg-white-main shadow-gray-200 shadow-md hover:text-orange-400 dark:text-gray-500 dark:hover:text-orange-400 cursor-pointer dark:shadow-gray-300">
+      className="py-6 px-3 rounded-lg my-5 md:my-0 xl:my-5 bg-white-main shadow-gray-200 shadow-md dark:shadow-sm hover:text-orange-400 dark:text-gray-500 dark:hover:text-orange-400 cursor-pointer dark:shadow-gray-300">
         <p className="tracking-wide font-semibold">
           {task.titleTask}
         </p>

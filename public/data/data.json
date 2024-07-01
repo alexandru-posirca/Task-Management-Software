@@ -5,7 +5,7 @@
       "statusActive": false
     },
     {
-      "nameBoard": "Board & Backlog",
+      "nameBoard": "Development",
       "statusActive": true,
       "columnsList": [
     {
@@ -13,7 +13,7 @@
       "tasksList": [
         {
           "titleTask": "Research design trends",
-          "descriptionTask": "Investigate the latest design trends to incorporate into the project.",
+          "descriptionTask": "Investigate the latest design  into the project.",
           "statusTask": "Backlog",
           "subTasks": [
             {
